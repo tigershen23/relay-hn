@@ -1,0 +1,19 @@
+{
+  "name": "relay-hn",
+  "version": "1.0.0",
+  "description": "Hacker News client in Relay/GraphQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tigershen23/relay-hn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tigershen23/relay-hn/issues"
+  },
+  "homepage": "https://github.com/tigershen23/relay-hn#readme"
+}
