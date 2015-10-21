@@ -15,3 +15,15 @@ class Item extends React.Component {
   }
 }
 
+let mountNode = document.getElementById('container')
+let item = {
+  id: "7",
+  url: "http://www.google.com",
+  title: "Google",
+  score: 100,
+  by: {id: "tigershen23"}
+}
+
+let store = { item }
+let rootComponent = <Item store={store} />
+ReactDOM.render(rootComponent, mountNode)
