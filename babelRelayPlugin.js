@@ -1,6 +1,6 @@
-var babelRelayPlugin = require('babel-relay-plugin')
-var introspectionQuery = require('graphql/utilities').introspectionQuery
-var request = require('sync-request')
+var babelRelayPlugin = require("babel-relay-plugin")
+var introspectionQuery = require("graphql/utilities").introspectionQuery
+var request = require("sync-request")
 
 var graphQLHubUrl = "http://www.GraphQLHub.com/graphql"
 var response = request("get", graphQLHubUrl, {

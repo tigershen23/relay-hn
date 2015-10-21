@@ -44,3 +44,13 @@ class HackerNewsRoute extends Relay.Route {
       `}),
   }
 }
+
+Relay.injectNetworkLayer(
+  new Relay.DefaultNetworkLayer("http://www.GraphQLHub.com/graphql")
+)
+
+let mountNode = document.getElementById("container")
+let rootComponent = <Relay.RootContainer
+  Component={Item}
+  route={new HackerNewsRoute()} />
+ReactDOM.render(rootComponent, mountNode)
