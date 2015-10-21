@@ -1,4 +1,20 @@
-var path = require('path');
+//var path = require('path');
+
+//module.exports = {
+  //entry: path.resolve(__dirname, "index.js"),
+  //module: {
+    //loaders: [
+      //{
+        //test: /\.js$/,
+        //loader: "babel",
+        //query: {stage: 0, plugins: ["./babelRelayPlugin"]},
+      //}
+    //]
+  //},
+  //output: {filename: "index.bundle.js", path: "./"},
+//}
+
+var path = require("path");
 
 module.exports = {
   entry: path.resolve(__dirname, "index.js"),
@@ -7,9 +23,10 @@ module.exports = {
       {
         test: /\.js$/,
         loader: "babel",
-        query: {stage: 0, plugins: ["./babelRelayPlugin"]},
+        //query: {stage: 0, plugins: ["./babelRelayPlugin"]},
+        query: {stage: 0, plugins: ['./babelRelayPlugin']}
       }
     ]
   },
-  output: {filename: "index.bundle.js", path: "./"},
-}
+  output: {filename: 'index.bundle.js', path: './'}
+};

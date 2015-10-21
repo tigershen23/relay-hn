@@ -1,9 +1,9 @@
-import React from "react"
-import ReactDOM from "react-dom"
+let React = require('react');
+let ReactDOM = require('react-dom');
 
 class Item extends React.Component {
   render() {
-    let item = this.props.store.item
+    let item = this.props.store.item;
 
     return (
       <div>
@@ -13,17 +13,4 @@ class Item extends React.Component {
       </div>
     );
   }
-}
-
-let mountNode = document.getElementById('container')
-let item = {
-  id: "7",
-  url: "http://www.google.com",
-  title: "Google",
-  score: 100,
-  by: {id: "tigershen23"}
-}
-
-let store = { item }
-let rootComponent = <Item store={store} />
-ReactDOM.render(rootComponent, mountNode)
+};
