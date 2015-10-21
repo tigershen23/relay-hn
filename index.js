@@ -30,7 +30,7 @@ Item = Relay.createContainer(Item, {
   }
 })
 
-class TopItemsList extends React.Component {
+class ItemsList extends React.Component {
   _onChange(event) {
     let storyType = event.target.value
     this.setState({
@@ -42,7 +42,7 @@ class TopItemsList extends React.Component {
   }
 
   render() {
-    let items = this.props.store.topStories.map((store, index) => {
+    let items = this.props.store.stories.map((store, index) => {
       return <Item store={store} key={index} />
     })
     let variables = this.props.relay.variables
@@ -62,7 +62,7 @@ class TopItemsList extends React.Component {
     );
   }
 }
-TopItemsList = Relay.createContainer(TopItemsList, {
+ItemsList = Relay.createContainer(ItemsList, {
   initialVariables: {
     storyType: "top",
   },
@@ -93,6 +93,6 @@ Relay.injectNetworkLayer(
 
 let mountNode = document.getElementById("container")
 let rootComponent = <Relay.RootContainer
-  Component={TopItemsList}
+  Component={ItemsList}
   route={new HackerNewsRoute()} />
 ReactDOM.render(rootComponent, mountNode)
